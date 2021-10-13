@@ -1,0 +1,31 @@
+{
+    "name": "fstack",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "watch": "tsc -w",
+        "dev": "nodemon dist/index.js",
+        "start": "node src/index.ts",
+        "start2": "ts-node src/index.ts"
+    },
+    "devDependencies": {
+        "@types/node": "^16.10.5",
+        "ts-node": "^10.3.0",
+        "typescript": "^4.4.4"
+    },
+    "dependencies": {
+        "@mikro-orm/cli": "^4.5.9",
+        "@mikro-orm/core": "^4.5.9",
+        "@mikro-orm/migrations": "^4.5.9",
+        "@mikro-orm/postgresql": "^4.5.9",
+        "pg": "^8.7.1"
+    },
+    "mikro-orm": {
+        "useTsNode": true,
+        "configPaths": [
+            "./src/mikro-orm.config.ts",
+            "./dist/mikro-orm.config.js"
+        ]
+    }
+}
